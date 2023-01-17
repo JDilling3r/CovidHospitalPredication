@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html><meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>HCA Covid-19 Survey</title>
+
+
+  <link rel="shortcut icon" href="https://hcacovidsurvey.com/images/favicon.png" type="image/png"
+/>
+
+
+  <meta name="description" content="HCA Inc"
+/>
+
+  <meta name="keywords" content="some, keywords, for, seo, you, know, google, duckduckgo, and, such"
+/>
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="https://hcacovidsurvey.com/css/screen.css" />
+<link rel="stylesheet" href="https://hcacovidsurvey.com/css/fonts.css" type="text/css" />
+<link
+  rel="stylesheet"
+  href="https://hcacovidsurvey.com/fork-awesome/css/fork-awesome.min.css"
+  type="text/css"
+/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="HCA Inc" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hcacovidsurvey.com/" /><meta property="og:image" content="https://hcacovidsurvey.com/images/cover-image.jpg"/><meta property="og:site_name" content="Jane Doe - Nutrition Coach &amp; Chef Consultant" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hcacovidsurvey.com/images/cover-image.jpg"/>
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="HCA Inc"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="HCA Inc">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="https://hcacovidsurvey.com/images/apple-touch-icon.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="https://hcacovidsurvey.com/images/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="https://hcacovidsurvey.com/images/favicon-16x16.png"
+/>
+<body>
+
+
+
+<header id="site-head" style="background-image: url(images/cover-image.jpg)">
+    <div class="vertical">
+        <div id="site-head-content" class="inner">
+
+            <h1 class="blog-title">HCA Covid-19 Survey</h1>
+            <h2 class="blog-description">Thank you for doing your part in keeping us all safe.</h2>
+
+            
+                 <a class='btn site-menu' data-title-anchor='survey'>Survey</a>
+            
+                 <a class='btn site-menu' data-title-anchor='about'>About</a>
+            
+                 <a class='btn site-menu' data-title-anchor='contact'>Contact</a>
+            
+            <i id='header-arrow' class="fa fa-angle-down"></i>
+        </div>
+    </div>
+</header>
+<main class="content" role="main">
+
+    <div class='fixed-nav'>
+    </div>
+    
+        <div class='post-holder'>
+            <article id='welcome' class='post first '>
+                <header class="post-header">
+                    <h2 class="post-title">Welcome</h2>
+                </header>
+                <section class="post-content">
+                    <p>Hi there! We are delighted that you have chosen to participate in our survey aimed at gathering information that will help healthcare providers better predict and prepare for the needs of COVID-19 patients. The ongoing COVID-19 pandemic has presented many challenges for healthcare providers, one of which is the shortage of medical resources and the lack of a clear plan for efficiently distributing them. This has made it difficult to provide adequate care for COVID-19 patients, particularly those who are at high risk for serious illness.</p>
+<p>By participating in this survey, you will be providing valuable information that will be used by an machine learning  solution to analyze patient data and predict which individuals are likely to need extended hospital stays if infected. The information you provide will be kept confidential and used solely for the purpose of improving healthcare for COVID-19 patients.</p>
+<p>We appreciate your time and effort in completing this survey, and we thank you for your support in this important effort.</p>
+
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+    
+        <div class='post-holder'>
+            <article id='survey' class='post  '>
+                <header class="post-header">
+                    <h2 class="post-title">Survey</h2>
+                </header>
+                <section class="post-content">
+                    <p>This patient survey will accurately predict whether you are at elevated risk of a prolonged hospital visit due to Covid-19. You will be provided with the results and your personal information never be saved. This data will only be used to aide in resource allocation for our hospitals.</p>
+<hr>
+
+<form>
+  <label for="AGE">AGE</label>
+  <input type="number" id="AGE" name="AGE" min="0" max="120" style="width: 50px;"><br>
+  
+  <input type="hidden" id="hidden_is_male" name="is_male" value="0">
+  <input type="hidden" id="hidden_is_female" name="is_female" value="0">
+  <input type="hidden" id="hidden_is_female_pregnant" name="is_female_pregnant" value="0">
+
+  <label>Gender:</label>
+  <input type="radio" id="is_male" name="is_male" value="1">
+ <label for="is_male">Male</label>
+ <input type="radio" id="is_female" name="is_female" value="0">
+ <label for="is_female">Female</label>
+
+   <script>
+     var is_male = document.getElementById("is_male");
+     var is_female = document.getElementById("is_female");
+     var female_pregnant = document.getElementById("is_female_pregnant");
+     is_male.onclick = function() {
+         is_female.checked = false;
+         is_male.value = "1";
+         document.querySelector("#is_female_pregnant").disabled = true;
+         document.querySelector("#is_female_pregnant").value = "0";
+         document.getElementById("hidden_is_female").value = "0";
+         document.getElementById("hidden_is_female_pregnant").value = "0";
+     }
+     is_female.onclick = function() {
+         is_male.checked = false;
+         is_male.value = "0";
+         document.querySelector("#is_female_pregnant").disabled = false;
+         document.getElementById("hidden_is_male").value = "0";
+     }
+   </script>
+
+  </select><br>
+  <label for="is_female_pregnant">Pregnant</label>
+  <select id="is_female_pregnant" name="is_female_pregnant">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select><br>
+  <label for="is_diabetic">Diabetic</label>
+  <select id="is_diabetic" name="is_diabetic">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select><br>
+  <label for="is_hypertensive">Hypertensive</label>
+  <select id="is_hypertensive" name="is_hypertensive">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select><br>
+  <label for="is_obese">Obese</label>
+  <select id="is_obese" name="is_obese">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select><br>
+  <label for="is_copd">COPD</label>
+  <select id="is_copd" name="is_copd">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select><br>
+  <label for="is_tobacco_user">Tobacco User</label>
+  <select id="is_tobacco_user" name="is_tobacco_user">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select><br>
+  <label for="is_heart_diseased">Heart Disease</label>
+  <select id="is_heart_diseased" name="is_heart_diseased">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+    </select><br>
+  <label for="is_immune_surpressed">Immune Surpression</label>
+  <select id="is_immune_surpressed" name="is_immune_surpressed">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+    </select><br>
+    <label for="is_other_diseased">Other Disease</label>
+    <select id="is_other_diseased" name="is_other_diseased">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+    </select><br>
+  <input type="submit" value="Submit">
+
+<script>
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    let formData = new FormData(form);
+    let obj = {};
+    formData.forEach(function(value, key) {
+        obj[key] = value;
+    });
+    let json = JSON.stringify(obj);
+    console.log(json);
+
+    fetch('http://localhost:8080/predict', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: json
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data === 1) {
+        form.innerHTML = "Thank you for your survey, you are predicted to be at an elevated risk to long term hospitalization if infected with Covid-19. Please take extra precautions and follow all CDC guidelines <a href='https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html'>CDC Covid-19 Prevention Guidelines</a>.";
+      }
+      else {
+        alert("You are at moderate risk for hospitalization");
+      }
+    });
+});
+</script>
+</form>
+
+<hr>
+
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+    
+        <div class='post-holder'>
+            <article id='about' class='post  '>
+                <header class="post-header">
+                    <h2 class="post-title">About</h2>
+                </header>
+                <section class="post-content">
+                    <h5 id="hca-survey">HCA Survey</h5>
+<p>As the world continues to grapple with the ongoing COVID-19 pandemic, one of the main challenges facing healthcare providers has been the shortage of medical resources and the lack of a clear plan for efficiently distributing them. This has made it difficult to provide adequate care for COVID-19 patients, particularly those who are at high risk for serious illness.</p>
+<p>This website is dedicated to addressing this issue by providing a solution that utilizes Artificial Intelligence to analyze patient data, lifestyle information, and external sources to predict which individuals are likely to need extended hospital stays due to COVID-19. We are inviting you, the patient, to take a survey that will help us gather the information needed to make these predictions.</p>
+<p>By taking this survey, you will be helping healthcare providers to better predict and prepare for the needs of their COVID-19 patients, ensuring that they receive the care they need in a timely manner.</p>
+<p>The information you provide will be kept confidential and used solely for the purpose of improving healthcare for COVID-19 patients. We appreciate your participation and thank you for your support in this important effort.</p>
+<h6 id="data-examination">Data Examination</h6>
+<p><img src="images/feature-importance.png" alt="Feature Importance Graph"></p>
+<p>Feature importance scores are a way to determine the relative importance of different features or variables in a dataset. These scores are typically calculated using algorithms such as decision trees, random forests, or gradient boosting, and they provide a way to understand which factors are most influential in the predictions made by a model. For example, in the case of predicting which patients are likely to need extended hospital stays due to COVID-19, feature importance scores can be used to determine which patient characteristics, such as age or underlying medical conditions, are most important in making these predictions.</p>
+<p>In the data collected and used to train the current machine learning model, we identified age and diabetes as the two most influential factors in predicting extended hospitalization of a patient.</p>
+<p><img src="images/hospitalization-by-age.png" alt="Age Hospitalization Graph"></p>
+<p>This visualization shows a U-Shaped Distribution that identifies the two extremes (Infant and Senior) as the most likely among all other ages to be hospitalized. This graph identifies, in detail, the importance of that feature to our model.</p>
+
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+    
+        <div class='post-holder'>
+            <article id='contact' class='post  last'>
+                <header class="post-header">
+                    <h2 class="post-title">Contact</h2>
+                </header>
+                <section class="post-content">
+                    <p><i class="fa fa-envelope"></i> <a href="mailto:your-email@your-domain.com">contact-us@hcahealthcare.com</a></p>
+<p><i class="fa fa-phone"></i> (615) 344-9551</p>
+<p>Questions?</p>
+
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+    
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    
+      <section class="copyright">© HCA Inc</section>
+
+
+    <section></section>
+    
+
+  </div>
+</footer>
+
+    <script type="text/javascript" src='https://hcacovidsurvey.com/js/jquery-3.6.0.min.js'></script>
+
+    
+    <script type="text/javascript" src='https://hcacovidsurvey.com/js/icons.js'></script>
+    <script type="text/javascript" src='https://hcacovidsurvey.com/js/index.js'></script>
+    
+</body>
+</html>
